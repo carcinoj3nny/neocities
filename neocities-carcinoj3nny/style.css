@@ -133,6 +133,12 @@ you can add them directly to the <div id="header"></div> element! */
         	}
 
 
+main {
+  background-color: #E6EEED;
+  flex: 1;
+  padding: 20px;
+  order: 2;
 }
 
+}
 </style>
