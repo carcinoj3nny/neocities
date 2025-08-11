@@ -3,30 +3,143 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The web site of carcinoj3nny</title>
+    <title>j3nny's place</title>
     <!-- The style.css file allows you to change the look of your web pages.
          If you include the next line in all your web pages, they will all share the same look.
          This makes it easier to make new pages for your site. -->
-    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="./style.css" rel="stylesheet" type="text/css" media="all">
   </head>
   <body>
-    <h1>Welcome to my Website!</h1>
+  
+        <div id="container">
+            <div id="headerArea">
+                <div id="header">
+                </div>
+                <nav id="navbar" style="margin-bottom: 10px;">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="./music.html">Music</a></li>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                    </ul>
+                </nav>
+            </div>
 
-    <p>This is a paragraph! Here's how you make a link: <a href="https://neocities.org">Neocities</a>.</p>
+            <div id="flex">
+                <aside id="leftSidebar" style="margin-right: 10px;">
+                    <h2>My Writing</h2>
+                    <div class="box">
+                        <!-- start sw-rss-feed code --> 
+                          <script type="text/javascript"> 
+                          <!-- 
+                          rssfeed_url = new Array(); 
+                          rssfeed_url[0]="https://carcinojenny.substack.com/feed";  
+                          rssfeed_frame_width="140"; 
+                          rssfeed_frame_height="300"; 
+                          rssfeed_scroll="off"; 
+                          rssfeed_scroll_step="6"; 
+                          rssfeed_scroll_bar="off"; 
+                          rssfeed_target="_blank"; 
+                          rssfeed_font_size="14"; 
+                          rssfeed_font_face=""; 
+                          rssfeed_title_bgimage=""; 
+                          rssfeed_footer="off"; 
+                          rssfeed_footer_name="rss feed"; 
+                          rssfeed_footer_bgcolor="#fff"; 
+                          rssfeed_footer_color="#333"; 
+                          rssfeed_footer_bgimage=""; 
+                          rssfeed_item_title_length="100"; 
+                          rssfeed_item_title_color="#000"; 
+                          rssfeed_item_bgcolor="#E6EEED"; 
+                          rssfeed_item_bgimage=""; 
+                          rssfeed_item_border_bottom="on"; 
+                          rssfeed_item_source_icon="off"; 
+                          rssfeed_item_date="off"; 
+                          rssfeed_item_description="on"; 
+                          rssfeed_item_description_length="120"; 
+                          rssfeed_item_description_color="#4ba35d"; 
+                          rssfeed_item_description_link_color="#333"; 
+                          rssfeed_item_description_tag="off"; 
+                          rssfeed_no_items="0"; 
+                          rssfeed_cache = "5e43b696a2af789d357549b059a5e808"; 
+                          //--> 
+                          </script> 
+                          <script type="text/javascript" src="//feed.surfing-waves.com/js/rss-feed.js"></script> 
+                          
+                    <!-- end sw-rss-feed code -->
+                    </div>
+                    <h2>Hi there!</h2>
+                    <h3>Corpoweb Links</h3>
+                    <ul>
+                        <li><a href="https://signal.me/#eu/DCuXnK4L6FQeZ3a5r827RvuHF8jzhgq9TWRutUo3pDEdTmu6b3hNwYtfSowrB9DU" target="_blank">Signal (Best way to contact me)</a></li>
+                        <li><a href="https://instagram.com/carcinoj3nny" target="_blank">Instagram</a></li>
+                        <li><a href="https://bsky.app/profile/carcinoj3nny.bsky.social" target="_blank">Bluesky</a></li>
+                        <li><a href="https://github.com/carcinoj3nny/" target="_blank">Github</a></li>
+                    </ul>
+                </aside>
+                <main>
+                    <h1>jenny's place</h1>
+                    <p><strong>an experiment in loving the internet again!</strong></p>
+                    <p>
+                     This is the template page. You shouldn't be here! 
+                    </p>
 
-    <p>Here's how you can make <strong>bold</strong> and <em>italic</em> text.</p>
 
-    <p>Here's how you can add an image:</p>
-    <img src="/neocities.png">
+                </main>
+                
+            </div>
+            <footer id="footer" style="margin-top: 10px;">CC0 Public Domain, 2022</footer>
+        </div>
+        <style>
 
-    <p>Here's how to make a list:</p>
+            :root {
+                --header-image: url('img/cluster.jpeg');
+                --body-bg-image: url('img/water.gif');
 
-    <ul>
-      <li>First thing</li>
-      <li>Second thing</li>
-      <li>Third thing</li>
-    </ul>
+                /* colors */
+                --content: #EFF6FF;
+            }
 
-    <p>To learn more HTML/CSS, check out these <a href="https://neocities.org/tutorials">tutorials</a>!</p>
+            /* BELOW THIS POINT IS MEDIA QUERY */
+
+            /* so you wanna change the width of your page? 
+            by default, the container width is 900px.
+            in order to keep things responsive, take your new height,
+            and then subtrack it by 100. use this new number as the 
+            "max-width" value below
+            */
+
+            @media only screen and (max-width: 800px) {
+                #flex {
+                    flex-wrap: wrap;
+                }
+
+                aside {
+                    width: 100%;
+                }
+
+                /* the order of the items is adjusted here for responsiveness!
+                since the sidebars would be too small on a mobile device.
+                feel free to play around with the order!
+                */
+                main {
+                    order: 1;
+                }
+
+                #leftSidebar {
+                    order: 2;
+                }
+
+                #rightSidebar {
+                    order: 3;
+                }
+
+                #navbar ul {
+                    flex-wrap: wrap;
+                }
+            }
+        </style>
   </body>
 </html>
